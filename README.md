@@ -28,12 +28,11 @@ O Projeto Backend Conectech é uma aplicação desenvolvida para fornecer uma AP
 - **Spring Data JPA / Hibernate**: Facilita a integração com o banco de dados e simplifica as operações de persistência de dados.
 - **MongoDB**: Banco de dados NoSQL utilizado para armazenar os dados da aplicação.
 - **Maven**: Gerenciador de dependências e construção de projetos para Java.
-- **WebSockets**: Utilizado para comunicação em tempo real no chat dos usuários.
   
 # Como Executar o Projeto
 
 ## Pré-requisitos
-
+  Docker
 - Java
 - Maven
 - Spring Boot
@@ -42,22 +41,22 @@ O Projeto Backend Conectech é uma aplicação desenvolvida para fornecer uma AP
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio
+   git clone https://github.com/SIN-disciplina-PI3/Conectech_Back_End
    ```
 Entre na pasta do projeto:
 ```bash
 Copy code
-cd seu-repositorio
+cd repositorio que se encontra o dockerfile
 ```
 Compile o projeto:
+Nessa etapa é nescessario ter o Docker Instalado na sua maquina e copie esse codigo
 ```bash
 Copy code
-mvn clean install
+docker-compose up --build
 ```
-Execute o projeto:
-```bash
-Copy code
-mvn spring-boot:run
-```
+Após essa etapa vai aparecer uma mensagem de build complete successfully e voce vai poder verificar o status da aplicaçao por meio do navegador colando
+http://localhost:8080/users 
+Com isso vai aparecer uma mensagem de [] indicando que o docker conseguiu subir a aplicação e conseguiu criar a imagem do MongoDb corretamente na sua maquina
+
 # Autor
 Este projeto foi desenvolvido por Felipe Ferreira,Lara Nunes,Cauã Sebastian,Thales Thiago,Maria Helena e Edgar Tavares.
